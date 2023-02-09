@@ -13,7 +13,19 @@ $ pip install --upgrade openai
 
 ```
 
-Now you are ready to go!
+# OpenIA API KEY
+In order to use openai api you must have an account and a access key wich can be generated [here](https://platform.openai.com/account/api-keys).
+
+Once done, replace in file the value of YOUR_API_KEY with your key, like as follows:
+
+```bash
+
+# OLD: ai.api_key = YOUR_API_KEY
+ai.api_key = XYQLD... 
+
+```
+
+and then you are ready to go!
 
 # Run the application
 
