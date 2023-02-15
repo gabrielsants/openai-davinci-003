@@ -1,4 +1,5 @@
 import openai as ai
+import os
 
 def chat(question,chat_log = None) -> str:
     if(chat_log == None):
@@ -16,7 +17,7 @@ def chat(question,chat_log = None) -> str:
     return response.choices[0].text
 
 if __name__ == "__main__":
-    ai.api_key = YOU_API_KEY
+    ai.api_key = YOUR_API_KEY
 
     completion = ai.Completion()
 
@@ -32,4 +33,11 @@ if __name__ == "__main__":
         question = input("Me: ")
         if question == "quit":
             break
-        print("AI: ",chat(question,start_chat_log))
+        elif question == "cls":
+            if(os.name == "posix"):
+                os.system('clear')
+            else:
+                os.ystem('cls')
+        else:
+            print("AI: ",chat(question,start_chat_log))
+            print("\n")
